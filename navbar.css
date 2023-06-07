@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  padding: 0;
+  
+}
+
+header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #505050 !important; /*navbar arka plan rengi*/
+  z-index: 999;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  color: #1e58c4;
+}
+
+.navbar__logo a {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar__list { /* Navbardaki yazıları yata yapıyor*/
+  display: flex;
+  list-style: none;
+}
+
+.navbar__item { /*yazıların arasına boşluk*/
+  margin-right: 20px;
+  position: relative;
+}
+
+.navbar__item:last-child {
+  margin-right: 0;
+}
+
+.navbar__item a {
+  font-size: 18px;
+  text-decoration: none;
+  color: #fff;
+  position: relative; /*navbardaki yazıların renkleri*/
+  transition: color 0.3s ease;
+}
+
+.navbar__item:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 0;
+   z-index: 1;
+}
+
+.navbar__item:hover:before {
+  height: 3px;
+  background-color: #7351ec;
+}
